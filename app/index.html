@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EmberValidationsTest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/ember-validations-test.css">
+  </head>
+  <body>
+    <script>
+      window.EmberValidationsTestENV = {{ENV}};
+      window.EmberENV = window.EmberValidationsTestENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/ember-validations-test.js"></script>
+    <script>
+      window.EmberValidationsTest = require('ember-validations-test/app')['default'].create(EmberValidationsTestENV.APP);
+    </script>
+  </body>
+</html>
